@@ -35,8 +35,8 @@ const registerUser = async (req, res) => {
       otp,
       role: Boolean(UserCount) ? request.role || "user" : "super admin",
     });
-    process.env.JWT_SECRET = "123456";
-    console.log(process.env.JWT_SECRET);
+    //process.env.JWT_SECRET = "123456";
+    //  console.log(process.env.JWT_SECRET);
     // Generate JWT token
     const token = jwt.sign(
       {

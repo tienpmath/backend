@@ -16,10 +16,13 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/tiendev", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://vercel-admin-user:ztRS3ekeWCxTp951@cluster0.0a6ga.mongodb.net/tiendev",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("Connected to MongoDB");
   })
