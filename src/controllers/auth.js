@@ -66,11 +66,12 @@ const registerUser = async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.RECEIVING_EMAIL, // Your Gmail email
-        pass: process.env.EMAIL_PASSWORD, // Your Gmail password
+        user: "tiendev88@gmail.com",
+        pass: "rorwcogghzierqbw"       
       },
     });
-
+// user: process.env.RECEIVING_EMAIL, // Your Gmail email
+/ pass: process.env.EMAIL_PASSWORD, // Your Gmail password
     // Email options
     let mailOptions = {
       from: process.env.RECEIVING_EMAIL, // Your Gmail email
@@ -121,8 +122,8 @@ const loginUser = async (req, res) => {
         .json({ success: false, message: "Incorrect Password" });
     }
 
-    process.env.JWT_SECRET = "123456";
-    console.log(process.env.JWT_SECRET);
+  //  process.env.JWT_SECRET = "123456";
+   // console.log(process.env.JWT_SECRET);
     const token = jwt.sign(
       {
         _id: user._id,
@@ -239,8 +240,8 @@ const forgetPassword = async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.RECEIVING_EMAIL, // Your Gmail email
-        pass: process.env.EMAIL_PASSWORD, // Your Gmail password
+        user: "tiendev88@gmail.com",
+        pass: "rorwcogghzierqbw",
       },
     });
 
@@ -400,8 +401,8 @@ const resendOtp = async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.RECEIVING_EMAIL, // Your Gmail email
-        pass: process.env.EMAIL_PASSWORD, // Your Gmail password
+        user: "tiendev88@gmail.com",
+        pass: "rorwcogghzierqbw",
       },
     });
 
